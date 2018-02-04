@@ -1,0 +1,43 @@
+body {
+    background-color: gray;
+}
+
+/* * {
+    border: 3px solid black;
+} */
+
+
+.logo {
+    width: 30px;
+    height: auto;
+}
+
+.logoBig{
+    width: 100px;
+    height: auto;
+}
+
+.centerDiv {
+    height: 100%;
+    width: 100%;
+
+    text-align: center;
+}
+
+.inline {
+    display: inline;
+}
+
+.inlineDiv {
+    display: inline-block;
+    margin-inline-end: 10%;
+}
+
+.jumboText {
+    font-size: 5em;
+}
+
+.jumboTextSmall {
+    font-size: 2em;
+}
+

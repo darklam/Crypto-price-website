@@ -1,0 +1,18 @@
+mixin jumboPrice(cryptoname, price, chHour, imgLink)
+    div(class=attributes.class, style=attributes.style)
+        div.container
+            div.row
+                div.col-lg-auto
+                    h.jumboText #{cryptoname} price:
+                div.col-lg-auto
+                    h.jumboText #{price}
+                div.col-lg-auto
+                    img.logoBig(src=imgLink, alt="")
+            div.row
+                div.col-md-auto
+                    h.jumboTextSmall Hourly change:
+                div.col-md-auto
+                    h.jumboTextSmall #{chHour}
+                    
+                 
+                
