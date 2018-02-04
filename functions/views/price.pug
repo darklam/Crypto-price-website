@@ -1,13 +1,31 @@
 html(lang="en")
+    include jumboview.pug
     head
+        link(rel="stylesheet", href="style.css")
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", crossorigin="anonymous")
         title Price Index
 
-    body
-        - var nav_classes = ['navbar', 'navbar-light bg-light']
-        nav(class=nav_classes)
-            
 
-        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css", crossorigin="anonymous")
+    body
+        - var nav_classes = ['navbar', 'navbar-expand-lg', 'navbar-light', 'bg-light']
+        nav(class=nav_classes)
+            a.navbar-brand(href="#")
+                img.logo(src="https://bitcoin.org/img/icons/opengraph.png", alt="")
+            a.navbar-brand(href="#") CryptoIndex
+            button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+            div(class="collapse navbar-collapse" id="navbarSupportedContent")
+                ul(class="navbar-nav mr-auto")
+                    li(class="nav-item active")
+                        a.nav-link(href="#") Home
+                    li.nav-item
+                        a.nav-link(href="#") Donate
+
+        div.container
+            +jumboPrice("LTC", "$159", "+1.29%", "https://cdn.coinranking.com/HyZL5BOOb/ltc.svg")(class="jumbotron", style="heigt: 400px;")
+
+
+
         script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js", crossorigin="anonymous")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js", crossorigin="anonymous")
         script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js", crossorigin="anonymous")

@@ -2,6 +2,7 @@ const functions = require('firebase-functions');
 
 const express = require('express');
 const app = express();
+app.use('/static', express.static('public'));
 app.set('view engine', 'pug');
 
 const socket = require('socket.io');
