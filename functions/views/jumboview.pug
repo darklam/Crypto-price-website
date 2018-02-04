@@ -1,11 +1,12 @@
 mixin jumboPrice(cryptoname, price, chHour, imgLink)
+    - let id = cryptoname + 'Price';
     div(class=attributes.class, style=attributes.style)
         div.container
             div.row
                 div.col-lg-auto
                     h.jumboText #{cryptoname} price:
-                div.col-lg-auto
-                    h.jumboText #{price}
+                div.col-lg-auto()
+                    h.jumboText(id=id) #{price}
                 div.col-lg-auto
                     img.logoBig(src=imgLink, alt="")
             div.row
